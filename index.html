@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA_Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <title>app-crud-firebase</title>
+  </head>
+  <body>
+    
+
+    <div class="container pt-5">
+      <div class="row row-cols-1">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <form id="task-form">
+                <div class="form-group">
+                  <input type="text" id="task-title" class="form-control" placeholder="Task Title" autofocus>
+                </div>
+                <div class="form-group pt-2">
+                  <textarea id="task-desc" rows="3" class="form-control" placeholder="Task description"></textarea>
+                </div>
+                <div class="d-grid gap-2 pt-2">
+                  <button class="btn btn-primary" id="btn-task-form">
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>   
+        </div>
+        <div class="col" id="tasks-container"></div>
+      </div>
+    </div>
+
+    
+
+
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script 
+      src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js">
+    </script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script 
+      src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js">
+    </script>
+    <script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCuwN9gB0zyKjRMH3eRdOhE1QY77EVbUXo",
+      authDomain: "app-crud-firebase-487fa.firebaseapp.com",
+      projectId: "app-crud-firebase-487fa",
+      storageBucket: "app-crud-firebase-487fa.appspot.com",
+      messagingSenderId: "788784998910",
+      appId: "1:788784998910:web:bfe19dfa4d4a83e34db8af"
+    };
+  // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
+
